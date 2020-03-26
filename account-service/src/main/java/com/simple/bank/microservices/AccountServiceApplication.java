@@ -8,7 +8,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-@EnableFeignClients("com.simple.bank.microservices")
+@EnableFeignClients("com.simple.bank.microservices.proxy")
 @EnableDiscoveryClient
 public class AccountServiceApplication {
 

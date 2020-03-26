@@ -1,0 +1,2 @@
+insert into customer(id, FIRST_NAME, LAST_NAME, CUSTOMER_NO) values (1, 'Arash', 'Farahani', '001');
+insert into customer(id, FIRST_NAME, LAST_NAME, CUSTOMER_NO) values (2, 'Maryam', 'Karandish', '002');
