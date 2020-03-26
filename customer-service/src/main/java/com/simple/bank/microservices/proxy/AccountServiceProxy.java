@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name="account-service")
+@FeignClient(name="netflix-zuul-api-gateway-server")
 @RibbonClient(name="account-service")
 public interface AccountServiceProxy {
-    @GetMapping("/account/customer/{customerNo}")
+    @GetMapping("/account-service/account/customer/{customerNo}")
     List<Account> findAccountByCustomer(@PathVariable String customerNo);
 }

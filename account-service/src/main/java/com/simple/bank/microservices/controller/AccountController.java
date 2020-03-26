@@ -2,6 +2,7 @@ package com.simple.bank.microservices.controller;
 
 import com.simple.bank.microservices.model.Account;
 import com.simple.bank.microservices.proxy.AccountTypeServiceProxy;
+import com.simple.bank.microservices.proxy.model.AccountType;
 import com.simple.bank.microservices.repository.AccountRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -37,7 +38,7 @@ public class AccountController {
         return account;
     }
 
-    @ApiOperation(value = "Get account list by customer No", response = List.class)
+    @ApiOperation(value = "Get account list by customer No", response = Account[].class)
     @GetMapping("/customer/{customerNo}")
     public List<Account> findAccountByCustomer(@ApiParam(value = "Customer No", required = true)
                                       @PathVariable String customerNo) {
